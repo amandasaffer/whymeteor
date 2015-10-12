@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	console.log("Hello!");
-      
 	var scroll_start = 0;
 	var startchange = $('#startchange');
 	var offset = startchange.offset();
