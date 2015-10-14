@@ -38,6 +38,14 @@ h6 {
   margin: 0 0 10px 0;
   font-weight: 500;
 }
+h1.purple,
+h2.purple,
+h3.purple,
+h4.purple,
+h5.purple,
+h6.purple {
+  color: #7156a7;
+}
 h1.clean,
 h2.clean,
 h3.clean,
@@ -101,27 +109,47 @@ ul li,
 ol li {
   margin: 0 0 10px;
 }
-ol {
-  margin: 55px 0 0 25px !important;
+.intro-list {
+  background: #fff;
+  border-radius: 4px;
+  padding: 30px 30px 10px;
 }
-ol li {
+ol.eight-reasons,
+ul.eight-reasons {
+  margin: 0px 0 0 25px;
+  font-size: 16px;
+}
+ol.eight-reasons li,
+ul.eight-reasons li {
   border-bottom: 1px solid #eee;
   padding: 4px 0 11px;
 }
-ol li a .fa {
+ol.eight-reasons li a .fa,
+ul.eight-reasons li a .fa {
   display: none;
   opacity: 0.25;
   font-size: 16px;
   margin-left: 5px;
 }
-ol li a:hover {
+ol.eight-reasons li a:hover,
+ul.eight-reasons li a:hover {
   text-decoration: none;
 }
-ol li a:hover .fa {
+ol.eight-reasons li a:hover .fa,
+ul.eight-reasons li a:hover .fa {
   display: inline-block;
 }
-ol li:last-child {
+ol.eight-reasons li:last-child,
+ul.eight-reasons li:last-child {
   border: none;
+}
+ul.eight-reasons {
+  list-style-type: none;
+  margin: 0;
+}
+ul.eight-reasons li strong {
+  color: #bbb;
+  margin-right: 5px;
 }
 a.button {
   padding: 16px 40px;
@@ -182,7 +210,7 @@ a.button:active {
 }
 @media screen and (min-width: 768px) {
   .main-hero .container {
-    padding-top: 120px;
+    padding-top: 100px;
     padding-bottom: 120px;
   }
   .main-hero h2 {
@@ -214,8 +242,16 @@ a.button:active {
 .section h3 {
   margin-top: 100px;
 }
-.section h3.yes {
+.section h3.less-margin {
   margin-top: 40px;
+}
+.section .intro {
+  padding-right: 50px;
+}
+.section .intro h4 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 @media handheld, screen and (min-width: 768px) {
   .section {
@@ -240,6 +276,7 @@ a.button:active {
   border: none;
   font-size: 18px;
   display: block;
+  width: 100%;
 }
 .drip-form .submit {
   padding: 14px 20px;
@@ -250,6 +287,7 @@ a.button:active {
   border: none;
   font-weight: 700;
   margin-top: 1px;
+  width: 100%;
 }
 .drip-form .submit:hover {
   background: #8069af;
@@ -320,6 +358,7 @@ a.button:active {
 }
 .examples span.caption a:hover i {
   display: inline-block;
+  opacity: 1;
 }
 .well {
   background: none;
@@ -332,6 +371,9 @@ a.button:active {
 }
 .well p {
   margin: 0;
+}
+.gray-full-box {
+  background: #f8f8f8;
 }
 footer {
   width: 100%;
