@@ -95,6 +95,11 @@ ul, ol
   background #fff
   border-radius 4px
   padding 30px 30px 10px
+  margin 20px
+  
+  // everything over 768px (tablet screens)
+  @media handheld, screen and (min-width: 768px)
+    margin 0
   
 ol.eight-reasons, ul.eight-reasons
   margin 0px 0 0 25px
@@ -159,6 +164,17 @@ a.button
   background-attachment fixed
   margin 0
   
+  &.full
+    height 100vh
+    width 100vw
+    
+    .container
+      padding-top 20vh
+    
+    .button
+      margin-top 40px
+      display inline-block
+  
   .container
     padding-top 60px
     padding-bottom 60px
@@ -178,6 +194,9 @@ a.button
     font-size 24px
     font-weight 300
     line-height 1.6
+    color white
+  
+  h1,p
     color white
   
   .intro
@@ -218,7 +237,15 @@ a.button
     margin-top 40px
   
   .intro
-    padding-right 50px
+    padding 0 40px 0
+    
+    // everything over 768px (tablet screens)
+    @media handheld, screen and (min-width: 768px)
+      padding 0 0 10px 0
+    
+    // everything over 992px (medium screens)
+    @media handheld, screen and (min-width: 992px)
+      padding 0 50px 0 0
     
     h4
       font-weight 700
@@ -230,35 +257,51 @@ a.button
     margin 110px 0 100px
 
 .drip-form
-  padding 60px !important
-  // background #f4f4f4
+  padding 35px
   background url('../images/07_small.jpg')
   background-size cover
   background-position 80% 50% !important
   border-radius 10px
   margin-bottom 130px
   
-  h4
-    margin-bottom 20px
-    color white
+  .form-group
+    width 100%
   
-  input[type=email]
-    padding 28px 30px 27px
+  // everything over 992px (medium screens)
+  @media handheld, screen and (min-width: 992px)
+    padding 60px
+    h4
+      font-size 24px
+    input[type=text], input[type=email]
+      margin-bottom 0
+  
+  // everything over 1200px (large screens)
+  @media handheld, screen and (min-width: 1200px)
+    h4
+      font-size 28px
+  
+  h4
+    margin-bottom 30px
+    color white
+    font-size 28px
+  
+  input[type=text], input[type=email]
+    padding 25px 25px 24px
+    margin-bottom 20px
     border-radius 30px
     border none
-    font-size 18px
+    font-size 16px
     display block
     width 100%
     
-  .submit
+  input[type=submit]
     padding 14px 20px
     background lighten(#6b539c, 10%)
     color #fff
-    font-size 18px
+    font-size 16px
     border-radius 30px
     border none
     font-weight 700
-    margin-top 1px
     width 100%
     
     &:hover
@@ -271,6 +314,14 @@ a.button
     font-size 38px
 
 .testimony
+  .quote
+    margin-bottom 40px
+  
+  // everything over 992px (medium screens)
+  @media handheld, screen and (min-width: 992px)
+    .quote
+      margin-bottom 0
+      
   p.quote
     font-size 18px
     font-style oblique
@@ -293,7 +344,17 @@ a.button
     margin-bottom 30px
 
 .examples
-  margin-top 160px
+  margin-top 60px
+  
+  .example
+    margin-bottom 40px
+  
+  // everything over 992px (medium screens)
+  @media handheld, screen and (min-width: 992px)
+    margin-top 160px
+    
+    .example
+      margin-bottom 0
   
   img
     border-top-right-radius 2px  
